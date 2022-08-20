@@ -1,0 +1,22 @@
+{
+    "name": "sessions-api",
+    "version": "1.0.0",
+    "description": "A Web application with an API",
+    "main": "server.js",
+    "directories": {
+        "test": "test"
+    },
+    "scripts": {
+        "test": "echo\"Error:no test specified\"&& exit 1",
+        "start:dev": "nodemon -w server.js"
+    },
+    "author": "Siddharth Shekhawat <siddharthshekhawat2710@gmail.com>",
+    "license": "ISC",
+    "devDependencies": {
+        "nodemon": "^2.0.19",
+        "tap": "^16.3.0"
+    },
+    "dependencies": {
+        "express": "^4.18.1"
+    }
+}
