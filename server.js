@@ -3,18 +3,18 @@
 const fs = require('fs');
 const express = require('express');
 const path = require('path');
-//const cors = require('cors');
+const cors = require('cors');
 const sessions = fs.readFileSync(path.join(__dirname,'sessions.json'),'utf-8');
 const app = express();
 const port = process.env.PORT || 3001;
 
-//app.use(cors());
+app.use(cors());
 
 app.get('/',(req,res)=>{
     res.send('<h1>Hello Salesofrce Devs from Express</h1>');
 })
 
-app.get('/api/sessions',(req,res)=>{
+app.get('/api/sessions',cors(),(req,res)=>{
     res.json(JSON.parse(sessions));
 })
 
